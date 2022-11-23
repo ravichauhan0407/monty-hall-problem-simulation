@@ -2,37 +2,91 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.backDoor
+{
+  background-color: #333;
+  position:relative;
+  width:200px;
+  height:300px;
+  margin: 0 auto;
+  margin-top:15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.heading
+{
+    font-size: 60px;
+}
+.body
+{
+     padding: 2%;
+     margin-left: 10%;
+     margin-right: 10%;
+}
+.door
+{
+  background-color: brown;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:200px;
+  height:300px;
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-out;
+}
+
+.doorOpen
+{
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+img {
+  width:100%;
+  height:100%;
+}
+
+.playing-area
+{
+   background-color: hsl(180, 100%, 17%);
+}
+.container {
+   display: flex; 
+   flex-wrap: wrap;
+   margin-left: 10%;
+   margin-right: 10%;
+   padding: 3%;
   }
+
+.box { 
+  flex-grow: 1; 
+  margin: 3%;
+ }
+
+.custom-btn
+{
+     min-width: 100px;
+     margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ .flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  gap: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.container-1
+{
+     display: flex;
+     justify-content: center;
+     
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-2
+{
+    
+    width: 50%;
+    margin: 20px;
+    background-color: lawngreen;
+    padding: 20px;
 }
