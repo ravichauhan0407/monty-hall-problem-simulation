@@ -5,6 +5,6 @@ export const Door = ({id,onclick,isOpen}) => {
 
   const cssClasses=["door",isOpen?"doorOpen":""]
   return (
-    <div onClick={()=>{onclick(id)}} className={cssClasses.join(' ')}></div>
+    <div onClick={()=>{onclick(id)}} className={cssClasses.join(' ')}>{!isOpen&&<div><b>Tab To Open</b></div>}</div>
   )
 }

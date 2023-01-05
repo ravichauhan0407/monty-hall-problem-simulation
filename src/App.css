@@ -9,23 +9,36 @@
   width:200px;
   height:300px;
   margin: 0 auto;
-  margin-top:15px;
+  
+}
+.logo
+{
+    font-size:xx-large  !important;
+    color: white;
+    font-size: bold;
 }
 
 .heading
 {
     font-size: 60px;
 }
+.sider
+{
+   width: 50px;
+   margin-top:5%;
+   height: 100vh;
+}
 .body
 {
      padding: 2%;
-     margin-left: 10%;
-     margin-right: 10%;
+     margin-left: 300px;
+     margin-top: 100px;
 }
 .door
 {
-  background-color: brown;
+  background-color: #F4B400;
   position:absolute;
+  cursor: pointer;
   top:0px;
   left:0px;
   width:200px;
@@ -33,6 +46,9 @@
   transform-origin: left;
   /*Speed of the Door animation*/
   transition: all 0.5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .doorOpen
@@ -47,14 +63,15 @@ img {
 
 .playing-area
 {
-   background-color: hsl(180, 100%, 17%);
+   
+   background-color:#4285F4;
+   border-radius: 30px;
+   margin-bottom: 50px;
 }
 .container {
    display: flex; 
    flex-wrap: wrap;
-   margin-left: 10%;
-   margin-right: 10%;
-   padding: 3%;
+   
   }
 
 .box { 
@@ -66,6 +83,11 @@ img {
 {
      min-width: 100px;
      margin-top: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #F4B400 !important;
+
 }
 
  .flex {
@@ -77,16 +99,67 @@ img {
 .container-1
 {
      display: flex;
-     justify-content: center;
-     
-    
+     flex-direction: column;
+     background-color: white;
+     padding: 20px;
+     height: 80vh;
+     border-radius: 30px;
+     margin: 30px 10px;
+
 }
 
 .container-2
 {
-    
-    width: 50%;
-    margin: 20px;
-    background-color: lawngreen;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container
+{
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+th, td {
+  text-align: center;
+  width:5%;
+  margin: 0;
+  padding: 0;
+}
+.row
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.content
+{
+    margin-left:2%;
+    position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .body {
+    padding: 2%;
+    margin-left: 10px;
+    margin-top: 100px;
+  }
+  .logo
+  {
+    font-size:large  !important;
+    color: white;
+    font-size: bold;
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .logo
+  {
+    font-size:20px  !important;
+    color: white;
+    font-size: bold;
+  }
 }

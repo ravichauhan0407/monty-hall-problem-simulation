@@ -12,7 +12,7 @@ const getRandomNumber=(n)=>
 
 
 
-export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames}) => {
+export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames,switchingWins}) => {
 
     let a=[0,1,2]
    
@@ -23,18 +23,21 @@ export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames}) => {
     {
          changeWinningState(getRandomNumber(3))
     },[])
+    
+    let isSwitch=[]
 
     const openDoorHandler=(id)=>
     {
           
           if(!doorState[id])
           {
+               isSwitch.push(id)               
                  if(!doorState[3])
                  {
                       let x=doorState
                       if(winingState==id)
                       {
-                                    let openDoorNumber=getRandomNumber(2)+1
+                             let openDoorNumber=getRandomNumber(2)+1
                                         x= x.map((element,index)=>
                                             {
                                                 if(index!=id)
@@ -82,11 +85,12 @@ export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames}) => {
                        changeState([...x])
                        if(id==winingState)
                        {
-                           gameEnd(1)
+                           let res=(isSwitch[0]==isSwitch[1]?0:1)
+                           gameEnd(1,res)
                        }
                        else
                        {
-                           gameEnd(0)
+                           gameEnd(0,0)
                        }
                        
                  }
@@ -99,9 +103,6 @@ export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames}) => {
        <h1>Simulation</h1>
        <hr/>
        <div className='playing-area'>
-        <div className='container-1'>
-            <button  onClick={()=>{resetGame()}} className='btn btn-dark custom-btn'>RESET</button>
-        </div>
         <div className='container'>
         {
           a.map((element)=>{
@@ -116,32 +117,9 @@ export const PlayingArea = ({resetGame,gameEnd,totalGame,winningGames}) => {
           })
        }
        </div>
-    <div className='container-1'>
-    <div className='container-2'>
-       <table class="table table-hover">
-  <tbody>
-    <tr>
-     <th scope="row">TOTAL GAME</th>
-      <td>{totalGame}</td>
-    </tr>
-    <tr>
-    <th scope="row">WIN</th>
-      <td>{winningGames}</td>
-    </tr>
-    <tr>
-    <th scope="row">LOSE</th>
-      <td>{totalGame-winningGames}</td>
-    </tr>
-    <tr>
-    <th scope="row">WIN %</th>
-      <td>{(totalGame>0?parseFloat((winningGames/totalGame)*100).toFixed(2):0)}%</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-</div>
+   
        </div>
+       
     </>
   )
 }
