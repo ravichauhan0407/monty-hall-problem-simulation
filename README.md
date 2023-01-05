@@ -6,6 +6,8 @@ The Monty Hall Simulation is a web app that demonstrates the Monty Hall problem,
 ## Demo
 
 
+https://user-images.githubusercontent.com/70810745/210886482-f99347f9-e26a-48f9-8aa1-914e9696c12c.mp4
+
 
 
 ## Run Locally
