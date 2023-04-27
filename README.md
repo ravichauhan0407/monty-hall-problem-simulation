@@ -1,7 +1,7 @@
 
 # Monty Hall Simulation
 
-The Monty Hall Simulation is a web app that demonstrates the Monty Hall problem, a famous probability puzzle. The app allows users to play a simulation of the game show "Let's Make a Deal", in which they must choose one of three doors to open in an attempt to win a prize. After the user makes their initial choice, one of the remaining doors is opened to reveal a losing prize. The user is then given the option to stick with their original choice or switch to the other remaining door. The app tracks the number of wins and losses for each strategy and displays the results in an interactive bar chart.
+The Monty Hall Simulation is a web app that demonstrates the Monty Hall problem, a famous probability puzzle. The app allows users to play a simulation of the game show "Let's Make a Deal", in which they must choose one of three doors to open in an attempt to win a prize. After the user makes their initial choice, one of the remaining doors is opened to reveal a losing prize. The user is then given the option to stick with their original choice or switch to the other remaining door. The app tracks the number of wins and losses for each strategy and displays the results in an interactive  chart.
 
 ## Demo
 
